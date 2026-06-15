@@ -15,7 +15,7 @@ from rest_framework.decorators import parser_classes
 
 # 🔐 REGISTER USER
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+
 def register_user(request):
     serializer = RegisterSerializer(data=request.data)
     if serializer.is_valid():
